@@ -1,6 +1,6 @@
 const addTodo = document.getElementById('add-todo');
 const inputTodo = document.getElementById('input-todo');
-const listItem = document.getElementById('list-item');
+const listItems = document.getElementById('list-item');
 
 addTodo.addEventListener('click', async (e) => {
   const todoValue = inputTodo.value;
@@ -83,7 +83,7 @@ const getTodosFromServer = async () => {
     </li>`;
   });
 
-  listItem.innerHTML = dataMap.join('');
+  listItems.innerHTML = dataMap.join('');
 
   const deleteTodo = document.getElementsByClassName('delete-todo');
   for (let i = 0; i < deleteTodo.length; i++) {
